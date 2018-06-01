@@ -1,0 +1,49 @@
+{
+  "name": "babel-plugin-transform-match",
+  "version": "0.1.3",
+  "description": "Compile match operator to ES5",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "babel src -d lib -s",
+    "fix": "standard --fix",
+    "lint": "standard src",
+    "test": "node tests/yes.js",
+    "prepush": "npm run prepublish",
+    "precommit": "npm run lint"
+  },
+  "author": {
+    "name": "chee",
+    "email": "chee@snake.dog",
+    "url": "https://snake.dog/"
+  },
+  "license": "MIT",
+  "keywords": [
+    "babel",
+    "babel-plugin",
+    "match",
+    "match-operator"
+  ],
+  "files": [
+    "license",
+    "lib/",
+    "tests/",
+    "src"
+  ],
+  "dependencies": {
+    "babel-plugin-syntax-match": "^0.1.1",
+    "babel-template": "^6.26.0"
+  },
+  "devDependencies": {
+    "babel-cli": "6.24.0",
+    "babel-core": "6.24.0",
+    "babel-eslint": "7.1.1",
+    "babel-preset-env": "^1.7.0",
+    "husky": "0.13.2",
+    "standard": "^11.0.1",
+    "tape": "^4.9.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chee/babel-plugin-transform-match.git"
+  }
+}
