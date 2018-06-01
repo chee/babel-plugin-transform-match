@@ -33,7 +33,7 @@ test('it should not die on good code', t => {
 test('it should transform correctly', t => {
   t.plan(2)
 
-  const name = runBabelInThisContext(`
+  const [, name] = runBabelInThisContext(`
     (() => {
       const string = "hello, jake";
       const regex = /hello, (\\w+)/;
@@ -42,7 +42,7 @@ test('it should transform correctly', t => {
     });
   `)()
 
-  t.equals(name[1], 'jake')
+  t.equals(name, 'jake')
 
   const doesntmatch = runBabelInThisContext(`
     (() => {
